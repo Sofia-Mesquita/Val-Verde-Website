@@ -12,6 +12,7 @@
     <link rel="manifest" href="../.res/img/favicon_io/site.webmanifest">
 
     <link rel="stylesheet" href="/.res/css/default-style.css">
+    <link rel="stylesheet" href="/.res/css/home-style.css">
     
   </head>
   <body>
@@ -38,6 +39,63 @@
     </header>
     <main>
       <!-- MAIN PAGE CONTENT -->
+      <div class="parent">
+
+       
+        <div class="left" id="photo-banner">
+          <img id="bannerImage" src="../.res/img/SunsetStalls.jpg" alt="Banner Image">
+        </div>
+
+        <script>
+          const images = ["../.res/img/SunsetStalls.jpg", "../.res/img/PinkPonyLady.jpg", "../.res/img/JewelryTable.jpg", "../.res/img/PrettyTable.jpg"];
+          let index = 0;
+
+          function rotateImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("bannerImage").src = images[index];
+          }
+
+          setInterval(rotateImage, 3000); // Change image every 3 seconds
+        </script>
+
+        <div class="right">
+          <h1>Welcome to Val Verde</h1>
+          <p>Val Verde Flea Market, located in Donna, Texas, is a bustling marketplace offering a diverse array of goods and services to the community. Open every day of the week, it provides a unique shopping experience with a wide selection of vendors. </p>
+            
+          <p>Visitors can explore various items, enjoy local culture, and savor great food, making it a vibrant destination for both locals and tourists.</p>
+
+          <div id="button-box">
+            <div id="top-buttons">
+              <button>
+                <a href="https://www.google.com/maps?sca_esv=b4f1a4e5dd378925&rlz=1C5CHFA_enUS1099US1099&output=search&q=valverde+flea+market&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWp5u5rQsC2YJafWTbyNSy6G3Vsi155b_IyTtSTnvQaXi9UKXyn6FRzjIvQ9M7pits9WIL8t0CQ1SHaJebsVrLgpZuq9a4lpfJIgUcWpsPAva7UjNXfbygA9HuZYk9aTrYXweTl5EdaMmgPpCcJpnuwCdfuCVSACYmPuzZ-fGV5mVOrmmnmbJspG_vmXXVeSsnlqc2kow&entry=mc&ved=1t:200715&ictx=111" target="_blank">
+                  <h2>Get Directions</h2>
+                </a>
+              </button>
+              <button>
+                <a href="./hours.html">
+                  <h2>Hours</h2>
+                </a>
+              </button>
+
+            </div>
+            <div id="bottom-buttons">
+              <button>
+                <a href="./events.html">
+                  <h2>Events</h2>
+                </a>
+              </button>
+              <button>
+                <a href="./contactUs.html">
+                  <h2>Contact Us</h2>
+                </a>
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
 
     </main>
     <footer>

@@ -194,9 +194,13 @@ footer {
   }
 
   .parent {
-    flex-direction: column-reverse;
     justify-items: center;
-    align-items: center
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #hours-main{
+    flex-direction: column-reverse;
   }
 
   .left, .right{
