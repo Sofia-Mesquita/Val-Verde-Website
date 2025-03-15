@@ -8,7 +8,8 @@ html{
 body{
   width: 75%;
   justify-self: center;
-  background-color: rgba(145, 210, 132, 0.2)
+  background-color: rgba(145, 210, 132, 0.2);
+  margin: 0;
 }
 
 /* BANNER HEADER */
@@ -48,6 +49,7 @@ header {
 
 #title {
   width: fit-content;
+  white-space: nowrap;
 }
 
 #title h1 {
@@ -93,9 +95,9 @@ nav a:hover {
 
 /* MAIN CONTENT */
 
-main {
-  height: 1000px;
-}
+/* main {
+
+} */
 
 /* FOOTER */
 
@@ -110,12 +112,13 @@ footer {
   flex-direction: row;
   padding: 2% 2%;
   width: 20%;
+  min-width: 300px;
 }
 
 #footer-logo {
   width: 30%;
   aspect-ratio: 1/1 ;
-  min-width: 150px; 
+  min-width: 175px; 
   height: auto;
 }
 
@@ -131,6 +134,7 @@ footer {
   text-align: center;
   margin: 0;
   color: #49a834;
+  white-space: nowrap;
 }
 
 #footer-title h2 {
@@ -161,4 +165,77 @@ footer {
   font-family:Arial, Helvetica, sans-serif;
   font-size: .75rem;
   padding: 0.5%;
+}
+
+/* LEFT AND RIGHT SPLIT CONTENT */
+
+.parent {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.left{
+  width: 50%;
+  text-align: center;
+  padding: 3%;
+}
+
+.right {
+  width: 50%;
+  text-align: center;
+  padding: 3%;
+}
+
+@media screen and (max-width: 1000px) {
+
+  header {
+    flex-direction: column;
+  }
+
+  .parent {
+    flex-direction: column-reverse;
+    justify-items: center;
+    align-items: center
+  }
+
+  .left, .right{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    width: 90%;
+  }
+
+  header{
+    align-items: center;
+  }
+
+  #logo-and-title{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  #logo-container{
+    width: 80%;
+    align-self: center;
+  }
+
+  #title-container {
+    width: fit-content;
+  }
+
+  #title{
+    text-align: center;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  nav a{
+    font-size: 1rem;
+  }
 }
