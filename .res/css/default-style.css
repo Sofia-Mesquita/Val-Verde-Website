@@ -86,6 +86,11 @@ nav a {
   text-shadow: 1px 1px hsla(0, 0%, 0%, 0.3);
 }
 
+nav a:hover {
+  text-decoration: underline;
+
+}
+
 /* MAIN CONTENT */
 
 main {
@@ -95,7 +100,6 @@ main {
 /* FOOTER */
 
 footer {
-  display: flex;
   background-color: rgb(145, 210, 132);
   height: 15%;
   justify-content: space-between;
@@ -150,4 +154,11 @@ footer {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 
+}
+
+#copyright {
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: .75rem;
+  padding: 0.5%;
 }
